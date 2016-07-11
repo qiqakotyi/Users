@@ -1,0 +1,23 @@
+{
+  "name": "frontend-developer-assessment",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "bootstrap": "~3.3.5",
+    "gsap": "^1.18.5",
+    "placeholders": "~4.0.1"
+  }
+}

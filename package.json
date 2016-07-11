@@ -1,0 +1,17 @@
+{
+  "name": "frontend-developer-assessment",
+  "version": "1.0.0",
+  "description": "Frontend Developer Assessment",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "git": "^0.1.5",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^2.3.1",
+    "gulp-live-server": "0.0.29"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "gulp-sass": "^2.3.2"
+  }
+}

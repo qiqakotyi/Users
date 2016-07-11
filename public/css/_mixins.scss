@@ -1,0 +1,59 @@
+/* media queries mixin
+-------------------------------------------------- */
+$desktop-width: 1600px;
+$laptop-width: 1440px;
+$tablet-width-portrait: 768px;
+$tablet-width-landscape: 1024px;
+$mobile-width-landscape: 640px;
+$mobile-width-portrait: 320px;
+
+@mixin bp-small-portrait {
+  @media screen and (min-width: #{$mobile-width-portrait}) and (max-width: #{$mobile-width-landscape}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin bp-small-landscape {
+  @media screen and (min-width: #{$mobile-width-portrait}) and (max-width: #{$mobile-width-landscape}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media screen and (min-width: #{$mobile-width-landscape}) and (max-width: #{$tablet-width-portrait}) {
+    @content;
+  }
+}
+
+@mixin bp-medium-landscape {
+  @media screen and (min-width: $tablet-width-portrait) and (max-width: $tablet-width-landscape) {
+    @content
+  }
+}
+
+@mixin bp-laptop {
+  @media screen and (min-width: $tablet-width-landscape) and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin bp-iphone4 {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation: portrait) {
+    @content
+  }
+}
+
+/* cross browser opacity mixin
+-------------------------------------------------- */
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
