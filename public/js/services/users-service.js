@@ -4,7 +4,7 @@
         return {
             getUsers: function (result) {
                 var dfd = $q.defer();
-                $http.get('/umbraco/api/lookbookapi/SummerItems')
+                $http.get('/data.json')
                     .success(function (data, status, headers, config) {
                         dfd.resolve(data);
                     })

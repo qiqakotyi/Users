@@ -38,7 +38,43 @@ gulp.task('lint', function () {
         .pipe(jshint.reporter('default'))
         .pipe(jshint.reporter("fail"));
 });
+gulp.task('scripts', function () {
+    gulp.src(['./public/vendor/jquery/dist/jquery.min.js',
+            './public/vendor/angular/angular.min.js',
+            './public/vendor/gsap/src/minified/TweenMax.min.js',
+            './public/vendor/placeholders/dist/placeholders.min.js',
+            './public/vendor/bootstrap/dist/js/bootstrap.min.js',
+            './public/vendor/lodash/lodash.js',
+        ])
+        .pipe(ngAnnotate())
+        .pipe(concat('combined.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/dist/js/'));
 
+    var appfiles = ['./public/js/users.js',
+        './public/js/services/users-service.js',
+        './public/js/controllers/user-controller.js'];
+
+    gulp.src(appfiles)
+        .pipe(ngAnnotate())
+        .pipe(concat('combined2.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/dist/js/'));
+
+
+    gulp.src(['./public/js/**/*.js'])
+        .pipe(ngAnnotate())
+        .pipe(uglify())
+        .pipe(rename({ extname: '.min.js' }))
+        .pipe(gulp.dest('./public/dist/js/'));
+
+    var final = ['./public/dist/js/combined.min.js'].concat(appfiles);
+    gulp.src('index.html')
+        .pipe(inject(gulp.src(final, {read: false}), {relative: false, ignorePath : 'public' }))
+        .pipe(gulp.dest('./'));
+
+
+});
 gulp.task('sass', function(done) {
     gulp.src('./public/css/site.scss')
         .pipe(sass({

@@ -8,10 +8,18 @@
     "git": "^0.1.5",
     "gulp": "^3.9.1",
     "gulp-connect": "^2.3.1",
-    "gulp-live-server": "0.0.29"
+    "gulp-inject": "^4.1.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-live-server": "0.0.29",
+    "gulp-ng-annotate": "^2.0.0",
+    "jshint": "^2.9.2"
   },
   "license": "ISC",
   "dependencies": {
-    "gulp-sass": "^2.3.2"
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
   }
 }
