@@ -38,10 +38,10 @@
     </div>
     <div class="row users">
         <div class="col-md-12 list">
-            <div class="item" ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize ">
+            <div class="item row" ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize ">
                 <a href ng-click="">
-                    <div class="user-">
-
+                    <div class="user-img col-md-1">
+                        <img class="img-responsive" src="public/images/placeholder.png">
                     </div>
                     <div class="name">{{user.first_name}} {{user.last_name}}</div>
                     <div>{{user.city}}</div>

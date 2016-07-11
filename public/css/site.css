@@ -5894,10 +5894,13 @@ body {
       background: #fff;
       padding: 0; }
       .users-wrap .users .list .item {
+        margin: 0;
         padding: 20px 22px;
         border-bottom: 1px solid #eee; }
         .users-wrap .users .list .item:hover {
           background: #f7f7f7; }
+        .users-wrap .users .list .item a {
+          text-decoration: none; }
       .users-wrap .users .list .name {
         font-family: 'SourceSansProBold', sans-serif;
         font-weight: bold;

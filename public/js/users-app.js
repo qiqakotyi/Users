@@ -7,9 +7,11 @@
                     templateUrl: "views/users.html",
                     controller: 'UsersCtrl'
                 })
-                .when('/index.html', {
+                .when('/index', {
                     templateUrl: "views/users.html",
                     controller: 'UsersCtrl'
-                });
+                })
+                .otherwise({redirectTo: '/index'}
+                );
         });
 })(angular);
