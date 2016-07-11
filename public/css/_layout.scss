@@ -5,7 +5,8 @@ html {
 body {
   height: 100%;
   @include  sans-regular;
-  color: $secondary-color;
+  color: $primary-color;
+  background-color: $bg-color;
   overflow-x: hidden;
 }
 

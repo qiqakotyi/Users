@@ -16,7 +16,7 @@ gulp.task("start", function () {
 
     connect.server(
         {
-            root: "views",
+            //root: "/index.html",
             port: 3000,
             livereload: true,
             middleware: function (connect, opt) {
@@ -41,6 +41,7 @@ gulp.task('lint', function () {
 gulp.task('scripts', function () {
     gulp.src(['./public/vendor/jquery/dist/jquery.min.js',
             './public/vendor/angular/angular.min.js',
+            './public/vendor/angular-route/angular-route.min.js',
             './public/vendor/gsap/src/minified/TweenMax.min.js',
             './public/vendor/placeholders/dist/placeholders.min.js',
             './public/vendor/bootstrap/dist/js/bootstrap.min.js',
@@ -51,9 +52,10 @@ gulp.task('scripts', function () {
         .pipe(uglify())
         .pipe(gulp.dest('./public/dist/js/'));
 
-    var appfiles = ['./public/js/users.js',
+    var appfiles = [
+        './public/js/users-app.js',
         './public/js/services/users-service.js',
-        './public/js/controllers/user-controller.js'];
+        './public/js/controllers/users-controller.js'];
 
     gulp.src(appfiles)
         .pipe(ngAnnotate())
@@ -65,17 +67,19 @@ gulp.task('scripts', function () {
     gulp.src(['./public/js/**/*.js'])
         .pipe(ngAnnotate())
         .pipe(uglify())
-        .pipe(rename({ extname: '.min.js' }))
+        .pipe(rename({extname: '.min.js'}))
         .pipe(gulp.dest('./public/dist/js/'));
+    //= ['./public/dist/js/combined.min.js'].
 
     var final = ['./public/dist/js/combined.min.js'].concat(appfiles);
-    gulp.src('index.html')
-        .pipe(inject(gulp.src(final, {read: false}), {relative: false, ignorePath : 'public' }))
+
+    //.concat(appfiles)
+
+    gulp.src('./index.html')
+        .pipe(inject(gulp.src(final, {read: false}), {relative: true}))
         .pipe(gulp.dest('./'));
-
-
 });
-gulp.task('sass', function(done) {
+gulp.task('sass', function (done) {
     gulp.src('./public/css/site.scss')
         .pipe(sass({
             errLogToConsole: true
@@ -84,7 +88,7 @@ gulp.task('sass', function(done) {
         .pipe(minifycss({
             keepSpecialComments: 0
         }))
-        .pipe(rename({ extname: '.min.css' }))
+        .pipe(rename({extname: '.min.css'}))
         .pipe(gulp.dest('./public/css/'))
         .on('end', done);
 });

@@ -1,0 +1,11 @@
+
+.users-wrap {
+  border-radius: 5px;
+  .head {
+    margin: 0;
+    .details {
+      min-height: 120px;
+      background: $head-color;
+    }
+  }
+}

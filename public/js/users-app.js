@@ -1,15 +1,15 @@
 (function (angular, undefined) {
     'use strict';
     angular.module('users', ['ngRoute'])
-        .config(function ($routeProvider, $locationProvider, AngularyticsProvider) {
+        .config(function ($routeProvider, $locationProvider) {
             $routeProvider
-                .when('#/', {
+                .when('/', {
                     templateUrl: "views/users.html",
                     controller: 'UsersCtrl'
                 })
-                .when('/index', {
+                .when('/index.html', {
                     templateUrl: "views/users.html",
                     controller: 'UsersCtrl'
-                })
+                });
         });
 })(angular);

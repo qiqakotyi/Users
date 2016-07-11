@@ -12,11 +12,20 @@
     <link href="public/css/site.min.css" rel="stylesheet">
 </head>
 <body ng-app="users"  ng-cloak>
-<div class="container-fluid" ng-cloak>
-    <div class="left-wrap">
+<div class="container" ng-cloak>
         <div ng-view=""></div>
-    </div>
 </div>
 
+<!-- inject:js -->
+
+<script src="public/dist/js/combined.min.js"></script>
+
+<script src="public/js/users-app.js"></script>
+
+<script src="public/js/services/users-service.js"></script>
+
+<script src="public/js/controllers/users-controller.js"></script>
+
+<!-- endinject -->
 </body>
 </html>

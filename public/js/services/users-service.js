@@ -4,16 +4,16 @@
         return {
             getUsers: function (result) {
                 var dfd = $q.defer();
-                $http.get('/data.json')
-                    .success(function (data, status, headers, config) {
+                $http.get('data.json')
+                    .success(function (data, status) {
                         dfd.resolve(data);
                     })
-                    .error(function (data, status, headers, config) {
+                    .error(function (data, status) {
                         dfd.reject(data);
                     });
                 return dfd.promise;
             }
-        }
+        };
     }]);
 
 })(angular);
