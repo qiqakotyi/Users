@@ -1,11 +1,52 @@
-
 .users-wrap {
   border-radius: 5px;
+  margin: 20px 0;
+
   .head {
     margin: 0;
+    font-size: 18px;
     .details {
+      padding: 20px;
       min-height: 120px;
       background: $head-color;
+    }
+  }
+  .query-input-wrapper {
+    background: $primary-color;
+    padding: 30px 15px;
+    border-bottom: 1px solid $bg-color;
+
+    .query-input {
+      width: 70%;
+      padding: 10px;
+      border-radius: 20px;
+      border-color: $head-color;
+      outline: none;
+      color: $black;
+    }
+  }
+
+  .users {
+    margin: 0;
+    .list {
+      background: $primary-color;
+      padding: 0;
+
+      .item {
+
+        padding: 20px 22px;
+        border-bottom: 1px solid $bg-color;
+
+        &:hover {
+          background: $hover-color;
+        }
+      }
+      .name {
+        @include sans-bold;
+        font-size: 22px;
+        color: $orange;
+      }
+
     }
   }
 }

@@ -5868,9 +5868,39 @@ body {
   display: none !important; }
 
 .users-wrap {
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin: 20px 0; }
   .users-wrap .head {
-    margin: 0; }
+    margin: 0;
+    font-size: 18px; }
     .users-wrap .head .details {
+      padding: 20px;
       min-height: 120px;
       background: #776b5d; }
+  .users-wrap .query-input-wrapper {
+    background: #fff;
+    padding: 30px 15px;
+    border-bottom: 1px solid #eee; }
+    .users-wrap .query-input-wrapper .query-input {
+      width: 70%;
+      padding: 10px;
+      border-radius: 20px;
+      border-color: #776b5d;
+      outline: none;
+      color: #000; }
+  .users-wrap .users {
+    margin: 0; }
+    .users-wrap .users .list {
+      background: #fff;
+      padding: 0; }
+      .users-wrap .users .list .item {
+        padding: 20px 22px;
+        border-bottom: 1px solid #eee; }
+        .users-wrap .users .list .item:hover {
+          background: #f7f7f7; }
+      .users-wrap .users .list .name {
+        font-family: 'SourceSansProBold', sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 22px;
+        color: #f47564; }

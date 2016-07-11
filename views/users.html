@@ -1,25 +1,59 @@
 <div class="users-wrap">
     <div class="row head">
         <div class="col-md-12 details">
-
+            <div class="image row">
+                <div class="col-md-1">
+                    <img class="img-responsive" src="public/images/placeholder.png">
+                </div>
+                <div class="col-md-5 mid-col">
+                    <div class="fullname">
+                        David Siwela
+                    </div>
+                    <div class="dob">
+                        31 Mar 1980
+                    </div>
+                    <div class="email-address">
+                        emma.dunham@vtgrafix.gov
+                    </div>
+                </div>
+                <div class="col-md-6 right-col">
+                    <div class="address">
+                        76 Sherman Road
+                    </div>
+                    <div class="city">
+                        Hastings
+                    </div>
+                    <div class="country">
+                        Aruba
+                    </div>
+                    <div class="zip-code">
+                        06830
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="query-input-wrapper">
+        <input type="text" ng-model="query" placeholder="Type to filter..." class="query-input"/>
+    </div>
+    <div class="row users">
+        <div class="col-md-12 list">
+            <div class="item" ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize ">
+                <a href ng-click="">
+                    <div class="user-">
 
+                    </div>
+                    <div class="name">{{user.first_name}} {{user.last_name}}</div>
+                    <div>{{user.city}}</div>
+                    <div>{{user.country}}</div>
+                </a>
+                <!--<li>{{user.date_of_birth}}</li>-->
+                <!--<li>{{user.email_address}}</li>-->
+                <!--<li>{{user.address}}</li>-->
 
-    <div class="col-md-12 list">
-
-        <!--<ul ng-repeat="user in users">-->
-
-        <!--<li>{{user.first_name}}</li>-->
-        <!--<li>{{user.last_name}}</li>-->
-        <!--<li>{{user.date_of_birth}}</li>-->
-        <!--<li>{{user.email_address}}</li>-->
-        <!--<li>{{user.address}}</li>-->
-        <!--<li>{{user.city}}</li>-->
-        <!--<li>{{user.country}}</li>-->
-        <!--<li>{{user.zip_code}}</li>-->
-
-        <!--</ul>-->
+                <!--<li>{{user.zip_code}}</li>-->
+            </div>
+        </div>
     </div>
 
 </div>
