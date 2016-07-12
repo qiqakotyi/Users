@@ -1,7 +1,7 @@
 <div class="users-wrap">
     <div class="row head">
         <div class="col-md-12 details">
-            <div class="image row" ng-repeat="item in users| limitTo: 1" on-finish-render="">
+            <div class="image row" ng-repeat="item in users| orderBy: 'first_name'| limitTo: 1" on-finish-render="">
                 <div class="col-md-2">
                     <img class="img-responsive" ng-show="!selected.image" ng-src="{{item.image}}">
 
@@ -54,7 +54,7 @@
     <div class="row users">
         <div class="col-lg-12 col-sm-12 col-xs-12 list">
             <div class="item col-sm-6 col-lg-6 col-xs-12"
-                 ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize "
+                 ng-repeat="user in users | filter: query | orderBy: 'first_name'| limitTo: pageSize : (currentPage - 1) * pageSize"
                  on-finish-render>
                 <a ng-click="select(user);scrollTop()">
                     <div class="user-img col-md-3">
@@ -69,7 +69,7 @@
     </div>
     <div class="row pagination-wrap">
         <div class="text-center">
-            <uib-pagination class="pagination-nav" total-items="count" rotate="false" ng-model="currentPage"
+            <uib-pagination class="pagination-nav" total-items="(users | filter:query).length" rotate="false" ng-model="currentPage"
                             items-per-page="pageSize" max-size="maxsize" boundary-links="false" previous-text=""
                             next-text="" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
         </div>
