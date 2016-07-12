@@ -1,6 +1,7 @@
 .users-wrap {
   border-radius: 5px;
   margin: 20px 0;
+  box-shadow: 0 2px 10px 2px $shadow;
 
   .head {
     margin: 0;
@@ -15,6 +16,13 @@
     background: $primary-color;
     padding: 30px 15px;
     border-bottom: 1px solid $bg-color;
+
+    .user-number {
+      margin: 0 5px 30px;
+      font-size: 30px;
+      @include sans-bold;
+      color: $orange;
+    }
 
     .query-input {
       width: 70%;
@@ -33,7 +41,9 @@
       padding: 0;
 
       .item {
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 30px;
         padding: 20px 22px;
         border-bottom: 1px solid $bg-color;
         border-right: 1px solid $bg-color;
@@ -42,7 +52,7 @@
         opacity: 0;
 
         &:hover {
-          background: $hover-color;
+          background: $shadow;
           cursor: pointer;
         }
 
@@ -51,10 +61,18 @@
           text-decoration: none;
           color: $small-font;
           min-height: 104px;
+
+          &:hover {
+            color: $primary-color !important;
+
+          }
           .name {
             @include sans-bold;
             font-size: 22px;
             color: $orange;
+            &:hover {
+              color: $primary-color !important;
+            }
           }
           .small-text {
             font-size: larger;
