@@ -36,19 +36,37 @@
         margin: 0;
         padding: 20px 22px;
         border-bottom: 1px solid $bg-color;
+        border-right: 1px solid $bg-color;
+        list-style: none;
+        min-height: 143px;
+        opacity: 0;
 
         &:hover {
           background: $hover-color;
+          cursor: pointer;
         }
 
         a {
+          display: block;
           text-decoration: none;
+          color: $small-font;
+          min-height: 104px;
+          .name {
+            @include sans-bold;
+            font-size: 22px;
+            color: $orange;
+          }
+          .small-text {
+            font-size: larger;
+            display: inline-block;
+          }
+
+          .user-img {
+            @include bp-small-portrait {
+              padding: 0;
+            }
+          }
         }
-      }
-      .name {
-        @include sans-bold;
-        font-size: 22px;
-        color: $orange;
       }
 
     }

@@ -7,7 +7,8 @@
     "address": "76 Sherman Road",
     "city": "Hastings",
     "country": "Aruba",
-    "zip_code": "06830"
+    "zip_code": "06830",
+    "image": "public/images/01.jpg"
   },
 
   {
@@ -18,7 +19,8 @@
     "address": "18 Hartswood Road",
     "city": "Stanford",
     "country": "Algeria",
-    "zip_code": "04346"
+    "zip_code": "04346",
+    "image": "public/images/02.jpg"
   },
 
   {
@@ -29,7 +31,8 @@
     "address": "56 Canal Street",
     "city": "London",
     "country": "Iceland",
-    "zip_code": "16935"
+    "zip_code": "16935",
+    "image": "public/images/03.jpg"
   },
 
   {
@@ -40,7 +43,8 @@
     "address": "55 Wooster Road",
     "city": "Adelaide",
     "country": "Eritrea",
-    "zip_code": "46446"
+    "zip_code": "46446",
+    "image": "public/images/04.jpg"
   },
 
   {
@@ -51,7 +55,8 @@
     "address": "31 Bramble Lane",
     "city": "Auckland",
     "country": "Netherlands",
-    "zip_code": "45893"
+    "zip_code": "45893",
+    "image": "public/images/05.jpg"
   },
 
   {
@@ -62,7 +67,8 @@
     "address": "42 Walford Way",
     "city": "Beaverton",
     "country": "France",
-    "zip_code": "10697"
+    "zip_code": "10697",
+    "image": "public/images/06.jpg"
   },
 
   {
@@ -73,7 +79,8 @@
     "address": "38 Colwood Place",
     "city": "Wilmington",
     "country": "Guatemala",
-    "zip_code": "01521"
+    "zip_code": "01521",
+    "image": "public/images/07.jpg"
   },
 
   {
@@ -84,7 +91,8 @@
     "address": "50 Hunt Street",
     "city": "Cardiff",
     "country": "Tanzania, United Republic of",
-    "zip_code": "65339"
+    "zip_code": "65339",
+    "image": "public/images/08.jpg"
   },
 
   {
@@ -95,7 +103,9 @@
     "address": "22 Clarendon Street",
     "city": "Portsmouth",
     "country": "Guernsey",
-    "zip_code": "02285"
+    "zip_code": "02285",
+    "image": "public/images/09.jpg"
+
   },
 
   {
@@ -106,7 +116,8 @@
     "address": "85 Golden Lane",
     "city": "Medford",
     "country": "Nigeria",
-    "zip_code": "29916"
+    "zip_code": "29916",
+    "image": "public/images/10.jpg"
   },
 
   {
@@ -117,7 +128,8 @@
     "address": "50 Mount Street",
     "city": "Woodville",
     "country": "Puerto Rico",
-    "zip_code": "47870"
+    "zip_code": "47870",
+    "image": "public/images/11.jpg"
   },
 
   {
@@ -128,7 +140,8 @@
     "address": "30 Buckley Street",
     "city": "Tacoma",
     "country": "Latvia",
-    "zip_code": "73729"
+    "zip_code": "73729",
+    "image": "public/images/12.jpg"
   },
 
   {
@@ -139,7 +152,8 @@
     "address": "26 Mercer Street",
     "city": "Hobart",
     "country": "Hong Kong",
-    "zip_code": "98550"
+    "zip_code": "98550",
+    "image": "public/images/13.jpg"
   },
 
   {
@@ -150,7 +164,8 @@
     "address": "64 Bramble Lane",
     "city": "Adelaide",
     "country": "Malta",
-    "zip_code": "50998"
+    "zip_code": "50998",
+    "image": "public/images/14.jpg"
   },
 
   {
@@ -161,7 +176,8 @@
     "address": "52 Orchard Road",
     "city": "Boston",
     "country": "Norfolk Island",
-    "zip_code": "56707"
+    "zip_code": "56707",
+    "image": "public/images/15.jpg"
   },
 
   {
@@ -172,7 +188,8 @@
     "address": "42 Glenn Drive",
     "city": "Toledo",
     "country": "Nicaragua",
-    "zip_code": "54985"
+    "zip_code": "54985",
+    "image": "public/images/16.jpg"
   },
 
   {
@@ -183,7 +200,8 @@
     "address": "89 Rivington Street",
     "city": "Lancaster",
     "country": "Congo",
-    "zip_code": "40390"
+    "zip_code": "40390",
+    "image": "public/images/17.jpg"
   },
 
   {
@@ -194,7 +212,8 @@
     "address": "87 Coleman Avenue",
     "city": "Durham",
     "country": "Guyana",
-    "zip_code": "85733"
+    "zip_code": "85733",
+    "image": "public/images/18.jpg"
   },
 
   {
@@ -205,7 +224,8 @@
     "address": "73 Robinson Street",
     "city": "Wilmington",
     "country": "Zambia",
-    "zip_code": "82963"
+    "zip_code": "82963",
+    "image": "public/images/19.jpg"
   },
 
   {
@@ -216,6 +236,7 @@
     "address": "45 Windsor Avenue",
     "city": "Sheffield",
     "country": "Zimbabwe",
-    "zip_code": "05706"
+    "zip_code": "05706",
+    "image": "public/images/20.jpg"
   }
 ]

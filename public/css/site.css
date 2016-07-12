@@ -5896,14 +5896,28 @@ body {
       .users-wrap .users .list .item {
         margin: 0;
         padding: 20px 22px;
-        border-bottom: 1px solid #eee; }
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
+        list-style: none;
+        min-height: 143px;
+        opacity: 0; }
         .users-wrap .users .list .item:hover {
-          background: #f7f7f7; }
+          background: #f7f7f7;
+          cursor: pointer; }
         .users-wrap .users .list .item a {
-          text-decoration: none; }
-      .users-wrap .users .list .name {
-        font-family: 'SourceSansProBold', sans-serif;
-        font-weight: bold;
-        font-style: normal;
-        font-size: 22px;
-        color: #f47564; }
+          display: block;
+          text-decoration: none;
+          color: #9c9a9b;
+          min-height: 104px; }
+          .users-wrap .users .list .item a .name {
+            font-family: 'SourceSansProBold', sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 22px;
+            color: #f47564; }
+          .users-wrap .users .list .item a .small-text {
+            font-size: larger;
+            display: inline-block; }
+          @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+            .users-wrap .users .list .item a .user-img {
+              padding: 0; } }

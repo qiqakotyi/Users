@@ -2,56 +2,52 @@
     <div class="row head">
         <div class="col-md-12 details">
             <div class="image row">
-                <div class="col-md-1">
-                    <img class="img-responsive" src="public/images/placeholder.png">
+                <div class="col-md-2">
+                  <img class="img-responsive"   ng-src="{{selected.image}}">
                 </div>
-                <div class="col-md-5 mid-col">
+                <div class="col-md-4 mid-col">
                     <div class="fullname">
-                        David Siwela
+                        {{selected.first_name}} {{selected.last_name}}
                     </div>
                     <div class="dob">
-                        31 Mar 1980
+                        {{selected.date_of_birth}}
                     </div>
                     <div class="email-address">
-                        emma.dunham@vtgrafix.gov
+                        {{selected.email_address}}
                     </div>
                 </div>
-                <div class="col-md-6 right-col">
+                <div class="col-md-5 right-col">
                     <div class="address">
-                        76 Sherman Road
+                        {{selected.address}}
                     </div>
                     <div class="city">
-                        Hastings
+                        {{selected.city}}
                     </div>
                     <div class="country">
-                        Aruba
+                        {{selected.country}}
                     </div>
                     <div class="zip-code">
-                        06830
+                        {{selected.zip_code}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="query-input-wrapper">
+        <div class="number">{{count}} Users</div>
         <input type="text" ng-model="query" placeholder="Type to filter..." class="query-input"/>
     </div>
     <div class="row users">
         <div class="col-md-12 list">
-            <div class="item row" ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize ">
-                <a href ng-click="">
-                    <div class="user-img col-md-1">
-                        <img class="img-responsive" src="public/images/placeholder.png">
+            <div class="item col-sm-6 col-lg-6 col-xs-12" ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize " on-finish-render>
+                <a ng-click="select(user)">
+                    <div class="user-img col-md-3">
+                        <img class="img-responsive" ng-src="{{user.image}}">
                     </div>
-                    <div class="name">{{user.first_name}} {{user.last_name}}</div>
-                    <div>{{user.city}}</div>
-                    <div>{{user.country}}</div>
+                    <div class="name"> {{user.first_name}} {{user.last_name}}</div>
+                    <div class="small-text">{{user.city}},</div>
+                    <div class="small-text">{{user.country}}</div>
                 </a>
-                <!--<li>{{user.date_of_birth}}</li>-->
-                <!--<li>{{user.email_address}}</li>-->
-                <!--<li>{{user.address}}</li>-->
-
-                <!--<li>{{user.zip_code}}</li>-->
             </div>
         </div>
     </div>
