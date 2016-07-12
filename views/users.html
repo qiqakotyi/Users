@@ -1,33 +1,47 @@
 <div class="users-wrap">
     <div class="row head">
         <div class="col-md-12 details">
-            <div class="image row">
+            <div class="image row" ng-repeat="item in users| limitTo: 1" on-finish-render="">
                 <div class="col-md-2">
-                  <img class="img-responsive"   ng-src="{{selected.image}}">
+                    <img class="img-responsive" ng-show="!selected.image" ng-src="{{item.image}}">
+
+                    <img class="img-responsive" ng-show="selected.image" ng-src="{{selected.image}}">
                 </div>
                 <div class="col-md-4 mid-col">
                     <div class="fullname">
                         {{selected.first_name}} {{selected.last_name}}
+
+                        <span ng-show="!selected.first_name && !selected.last_name ">{{item.first_name}} {{item.last_name}}</span>
                     </div>
                     <div class="dob">
                         {{selected.date_of_birth}}
+
+                        <span ng-show="!selected.date_of_birth">{{item.date_of_birth}}</span>
                     </div>
                     <div class="email-address">
                         {{selected.email_address}}
+
+                        <span ng-show="!selected.email_address"> {{item.email_address}}</span>
                     </div>
                 </div>
                 <div class="col-md-5 right-col">
                     <div class="address">
                         {{selected.address}}
+
+                        <span ng-show="!selected.address">{{item.address}}</span>
                     </div>
                     <div class="city">
                         {{selected.city}}
+
+                        <span ng-show="!selected.city">{{item.city}}</span>
                     </div>
                     <div class="country">
                         {{selected.country}}
+                        <span ng-show="!selected.country">{{item.country}}</span>
                     </div>
                     <div class="zip-code">
                         {{selected.zip_code}}
+                        <span ng-show="!selected.zip_code">{{item.zip_code}}</span>
                     </div>
                 </div>
             </div>
@@ -38,8 +52,10 @@
         <input type="text" ng-model="query" placeholder="Type to filter..." class="query-input"/>
     </div>
     <div class="row users">
-        <div class="col-md-12 list">
-            <div class="item col-sm-6 col-lg-6 col-xs-12" ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize " on-finish-render>
+        <div class="col-lg-12 col-sm-12 col-xs-12 list">
+            <div class="item col-sm-6 col-lg-6 col-xs-12"
+                 ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize "
+                 on-finish-render>
                 <a ng-click="select(user);scrollTop()">
                     <div class="user-img col-md-3">
                         <img class="img-responsive" ng-src="{{user.image}}">
@@ -51,9 +67,11 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row pagination-wrap">
         <div class="text-center">
-            <uib-pagination total-items="count" rotate="false" ng-model="currentPage" items-per-page="pageSize" max-size="maxsize" boundary-links="false" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+            <uib-pagination class="pagination-nav" total-items="count" rotate="false" ng-model="currentPage"
+                            items-per-page="pageSize" max-size="maxsize" boundary-links="false" previous-text=""
+                            next-text="" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
         </div>
     </div>
 

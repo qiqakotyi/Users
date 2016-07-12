@@ -5852,17 +5852,16 @@ h2 {
   h3 {
     font-size: 20px; } }
 
-html {
-  height: 100%; }
-
 body {
-  height: 100%;
   font-family: 'SourceSansProRegular', sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #fff;
   background-color: #eee;
-  overflow-x: hidden; }
+  overflow: visible; }
+
+* {
+  -webkit-overflow-scrolling: touch; }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
@@ -5879,7 +5878,19 @@ body {
     .users-wrap .head .details {
       padding: 20px;
       min-height: 120px;
-      background: #776b5d; }
+      background: #776b5d;
+      margin-top: 30px;
+      opacity: 0; }
+      @media screen and (min-width: 640px) and (max-width: 768px) {
+        .users-wrap .head .details .image img {
+          margin: 0 auto;
+          width: 250px;
+          text-align: center; } }
+      @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+        .users-wrap .head .details .image img {
+          margin: 0 auto;
+          width: 200px;
+          text-align: center; } }
   .users-wrap .query-input-wrapper {
     background: #fff;
     padding: 30px 15px;
@@ -5898,6 +5909,12 @@ body {
       border-color: #776b5d;
       outline: none;
       color: #000; }
+      @media screen and (min-width: 640px) and (max-width: 768px) {
+        .users-wrap .query-input-wrapper .query-input {
+          width: 100%; } }
+      @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+        .users-wrap .query-input-wrapper .query-input {
+          width: 100%; } }
   .users-wrap .users {
     margin: 0; }
     .users-wrap .users .list {
@@ -5907,12 +5924,14 @@ body {
         margin-left: 0;
         margin-right: 0;
         margin-top: 30px;
-        padding: 20px 22px;
         border-bottom: 1px solid #eee;
         border-right: 1px solid #eee;
         list-style: none;
         min-height: 143px;
-        opacity: 0; }
+        opacity: 0;
+        -webkit-transition: all, 0.5s, ease-in;
+        -o-transition: all, 0.5s, ease-in;
+        transition: all, 0.5s, ease-in; }
         .users-wrap .users .list .item:hover {
           background: #c4ad8b;
           cursor: pointer; }
@@ -5920,11 +5939,18 @@ body {
             color: #fff !important; }
             .users-wrap .users .list .item:hover a .name {
               color: #fff !important; }
+        @media screen and (min-width: 640px) and (max-width: 768px) {
+          .users-wrap .users .list .item {
+            text-align: center; } }
+        @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+          .users-wrap .users .list .item {
+            text-align: center; } }
         .users-wrap .users .list .item a {
           display: block;
           text-decoration: none;
           color: #9c9a9b;
-          min-height: 104px; }
+          min-height: 143px;
+          padding: 20px 0; }
           .users-wrap .users .list .item a .name {
             font-family: 'SourceSansProBold', sans-serif;
             font-weight: bold;
@@ -5937,3 +5963,21 @@ body {
           @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
             .users-wrap .users .list .item a .user-img {
               padding: 0; } }
+          @media screen and (min-width: 640px) and (max-width: 768px) {
+            .users-wrap .users .list .item a .user-img img {
+              width: 150px;
+              margin: 0 auto; } }
+          @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+            .users-wrap .users .list .item a .user-img img {
+              width: 150px;
+              margin: 0 auto; } }
+  .users-wrap .pagination-wrap {
+    margin: 0; }
+    .users-wrap .pagination-wrap .text-center {
+      background-color: #776b5d; }
+      .users-wrap .pagination-wrap .text-center .active a {
+        background-color: #f47564;
+        border-color: #f47564;
+        color: #fff !important; }
+      .users-wrap .pagination-wrap .text-center .pagination-nav a {
+        color: #776b5d; }

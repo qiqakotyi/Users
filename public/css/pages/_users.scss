@@ -13,6 +13,24 @@
       padding: 20px;
       min-height: 120px;
       background: $head-color;
+      margin-top: 30px;
+      opacity: 0;
+
+      .image {
+        img {
+          @include bp-medium {
+            margin: 0 auto;
+            width: 250px;
+            text-align: center;
+
+          }
+          @include bp-small-portrait {
+            margin: 0 auto;
+            width: 200px;
+            text-align: center;
+          }
+        }
+      }
     }
   }
   .query-input-wrapper {
@@ -34,6 +52,13 @@
       border-color: $head-color;
       outline: none;
       color: $black;
+
+      @include bp-medium {
+        width: 100%;
+      }
+      @include bp-small-portrait {
+        width: 100%;
+      }
     }
   }
 
@@ -47,12 +72,13 @@
         margin-left: 0;
         margin-right: 0;
         margin-top: 30px;
-        padding: 20px 22px;
         border-bottom: 1px solid $bg-color;
         border-right: 1px solid $bg-color;
         list-style: none;
         min-height: 143px;
         opacity: 0;
+
+        @include transition(all, .5s, ease-in);
 
         &:hover {
           background: $shadow;
@@ -65,11 +91,19 @@
           }
         }
 
+        @include bp-medium {
+          text-align: center;
+        }
+        @include bp-small-portrait {
+          text-align: center;
+        }
+
         a {
           display: block;
           text-decoration: none;
           color: $small-font;
-          min-height: 104px;
+          min-height: 143px;
+          padding: 20px 0;
 
           .name {
             @include sans-bold;
@@ -83,13 +117,45 @@
           }
 
           .user-img {
+
             @include bp-small-portrait {
               padding: 0;
+            }
+
+            img {
+              @include bp-medium {
+                width: 150px;
+                margin: 0 auto;
+              }
+              @include bp-small-portrait {
+                width: 150px;
+                margin: 0 auto;
+              }
             }
           }
         }
       }
 
+    }
+  }
+  .pagination-wrap {
+    margin: 0;
+
+    .text-center {
+      background-color: $head-color;
+
+      .active {
+        a {
+          background-color: $orange;
+          border-color: $orange;
+          color: $primary-color !important;
+        }
+      }
+      .pagination-nav {
+        a {
+          color: $head-color;
+        }
+      }
     }
   }
 }
