@@ -40,7 +40,7 @@
     <div class="row users">
         <div class="col-md-12 list">
             <div class="item col-sm-6 col-lg-6 col-xs-12" ng-repeat="user in users | filter: query | limitTo: pageSize : (currentPage - 1) * pageSize " on-finish-render>
-                <a ng-click="select(user)">
+                <a ng-click="select(user);scrollTop()">
                     <div class="user-img col-md-3">
                         <img class="img-responsive" ng-src="{{user.image}}">
                     </div>
@@ -49,6 +49,11 @@
                     <div class="small-text">{{user.country}}</div>
                 </a>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-center">
+            <uib-pagination total-items="count" rotate="false" ng-model="currentPage" items-per-page="pageSize" max-size="maxsize" boundary-links="false" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
         </div>
     </div>
 

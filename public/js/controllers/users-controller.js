@@ -2,6 +2,8 @@
     'use strict';
     angular.module('users').controller('UsersCtrl', function ($scope, $timeout, usersService) {
 
+        $scope.pageSize = 10;
+        $scope.currentPage = 1;
 
         //Functions
         //__________________________________________________________________________________________________________________
@@ -9,9 +11,10 @@
             $scope.selected = user;
         };
 
-        $scope.$on('$routeChangeSuccess', function () {
-            // do something
-        });
+        $scope.scrollTop = function () {
+            $("html, body").animate({scrollTop: 0}, "slow");
+            return false;
+        }
 
         //Events
         //__________________________________________________________________________________________________________________

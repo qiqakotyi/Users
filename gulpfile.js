@@ -45,7 +45,8 @@ gulp.task('scripts', function () {
             './public/vendor/gsap/src/minified/TweenMax.min.js',
             './public/vendor/placeholders/dist/placeholders.min.js',
             './public/vendor/bootstrap/dist/js/bootstrap.min.js',
-            './public/vendor/lodash/lodash.js',
+            './public/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
+            './public/vendor/lodash/lodash.js'
         ])
         .pipe(ngAnnotate())
         .pipe(concat('combined.min.js'))
@@ -72,8 +73,6 @@ gulp.task('scripts', function () {
     //= ['./public/dist/js/combined.min.js'].
 
     var final = ['./public/dist/js/combined.min.js'].concat(appfiles);
-
-    //.concat(appfiles)
 
     gulp.src('./index.html')
         .pipe(inject(gulp.src(final, {read: false}), {relative: true}))

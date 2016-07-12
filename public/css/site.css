@@ -5871,6 +5871,8 @@ body {
   border-radius: 5px;
   margin: 20px 0;
   box-shadow: 0 2px 10px 2px #c4ad8b; }
+  .users-wrap img {
+    border-radius: 50%; }
   .users-wrap .head {
     margin: 0;
     font-size: 18px; }
@@ -5914,21 +5916,21 @@ body {
         .users-wrap .users .list .item:hover {
           background: #c4ad8b;
           cursor: pointer; }
+          .users-wrap .users .list .item:hover a {
+            color: #fff !important; }
+            .users-wrap .users .list .item:hover a .name {
+              color: #fff !important; }
         .users-wrap .users .list .item a {
           display: block;
           text-decoration: none;
           color: #9c9a9b;
           min-height: 104px; }
-          .users-wrap .users .list .item a:hover {
-            color: #fff !important; }
           .users-wrap .users .list .item a .name {
             font-family: 'SourceSansProBold', sans-serif;
             font-weight: bold;
             font-style: normal;
             font-size: 22px;
             color: #f47564; }
-            .users-wrap .users .list .item a .name:hover {
-              color: #fff !important; }
           .users-wrap .users .list .item a .small-text {
             font-size: larger;
             display: inline-block; }

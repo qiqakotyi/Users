@@ -3,6 +3,9 @@
   margin: 20px 0;
   box-shadow: 0 2px 10px 2px $shadow;
 
+  img {
+    border-radius: 50%;
+  }
   .head {
     margin: 0;
     font-size: 18px;
@@ -54,6 +57,12 @@
         &:hover {
           background: $shadow;
           cursor: pointer;
+          a {
+            color: $primary-color !important;
+            .name {
+              color: $primary-color !important;
+            }
+          }
         }
 
         a {
@@ -62,17 +71,11 @@
           color: $small-font;
           min-height: 104px;
 
-          &:hover {
-            color: $primary-color !important;
-
-          }
           .name {
             @include sans-bold;
             font-size: 22px;
             color: $orange;
-            &:hover {
-              color: $primary-color !important;
-            }
+
           }
           .small-text {
             font-size: larger;
