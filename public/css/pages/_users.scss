@@ -17,17 +17,20 @@
       opacity: 0;
 
       .image {
+        @include bp-medium {
+          text-align: center;
+        }
+        @include bp-small-portrait {
+          text-align: center;
+        }
         img {
           @include bp-medium {
             margin: 0 auto;
             width: 250px;
-            text-align: center;
-
           }
           @include bp-small-portrait {
             margin: 0 auto;
             width: 200px;
-            text-align: center;
           }
         }
       }
